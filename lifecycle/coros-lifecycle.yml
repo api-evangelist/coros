@@ -1,0 +1,9 @@
+generated: '2026-10-18'
+method: searched
+source:
+  - https://coros.com/cn/status
+  - https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+versioning: unknown
+deprecation: unknown
+status_page: https://coros.com/cn/status
+note: Status page shows server and API connection status with availability metrics. No versioning or deprecation policy documented.

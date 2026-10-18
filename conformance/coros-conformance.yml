@@ -1,0 +1,21 @@
+generated: '2026-10-18'
+method: searched
+source:
+  - https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+  - https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: "Partner API uses OAuth 2.0 for multi-user credentials; MCP uses OAuth 2.0 for single-user authorization"
+  - id: json-api
+    conforms: false
+    evidence: "No evidence of JSON:API compliance in documentation"
+  - id: rfc9457
+    conforms: false
+    evidence: "No evidence of RFC 9457 (Problem Details for HTTP APIs) compliance"
+  - id: pagination
+    conforms: unknown
+    evidence: "Pagination conventions not documented"
+  - id: idempotency
+    conforms: unknown
+    evidence: "Idempotency mechanisms not documented"

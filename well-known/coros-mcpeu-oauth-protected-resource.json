@@ -1,0 +1,1 @@
+{"resource":"https://mcpeu.coros.com","authorization_servers":["https://mcpeu.coros.com"],"scopes_supported":["openid","mcp.tools","offline_access"],"bearer_methods_supported":["header"]}

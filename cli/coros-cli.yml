@@ -1,0 +1,14 @@
+generated: '2026-10-18'
+method: searched
+source:
+  - https://raw.githubusercontent.com/coroslab/COROS-MCP/main/changelog/CHANGELOG.md
+  - https://www.npmjs.com/package/coros-mcp
+install: "npm install -g coros-mcp"
+commands:
+  - name: coros-mcp
+    description: TypeScript CLI for COROS MCP gateway login and tool calls
+    resource: MCP
+    flows:
+      - "Login to COROS MCP gateway"
+      - "Make tool calls to COROS MCP"
+note: Official COROS MCP CLI tool available via npm. Provides gateway login and tool calling functionality.

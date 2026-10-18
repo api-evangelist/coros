@@ -1,0 +1,65 @@
+generated: '2026-10-18'
+method: searched
+source: https://raw.githubusercontent.com/coroslab/COROS-MCP/main/changelog/CHANGELOG.md
+scheme: date-based
+current_version: unknown
+entries:
+  - version: "2026-09-21"
+    date: "2026-09-21"
+    breaking: false
+    highlights:
+      - "Use AI to create road running, trail running, and cycling plans and workouts"
+      - "Sync plans to COROS (4-16 weeks long)"
+      - "Save to Training Plan Library or Workout Library"
+      - "Search and edit plans and workouts with AI"
+  - version: "2026-09-09"
+    date: "2026-09-09"
+    breaking: false
+    highlights:
+      - "COROS listed in Doubao plugin directory"
+  - version: "2026-08-27"
+    date: "2026-08-27"
+    breaking: false
+    highlights:
+      - "COROS listed in Workbuddy connector directory"
+  - version: "2026-07-24"
+    date: "2026-07-24"
+    breaking: false
+    highlights:
+      - "COROS listed in Claude connector directory"
+  - version: "2026-07-01"
+    date: "2026-07-01"
+    breaking: false
+    highlights:
+      - "COROS listed in ChatGPT plugin directory"
+  - version: "2026-06-24"
+    date: "2026-06-24"
+    breaking: false
+    highlights:
+      - "Improved Skill login and tool calling for stateless MCP endpoint"
+  - version: "2026-06-23"
+    date: "2026-06-23"
+    breaking: false
+    highlights:
+      - "Support querying workout split data"
+      - "Support querying workout feedback and notes"
+      - "Support retrieving workout record .fit files (50/day limit)"
+      - "Support querying menstrual cycle data"
+      - "Support querying stress time-series data"
+      - "Support querying health check time-series data"
+      - "Support querying sleep HRV time-series data"
+  - version: "2026-05-19"
+    date: "2026-05-19"
+    breaking: false
+    highlights:
+      - "Added cross-region login with unified endpoint: https://mcp.coros.com/mcp"
+  - version: "2026-05-09"
+    date: "2026-05-09"
+    breaking: false
+    highlights:
+      - "Added Skill access: npm install -g coros-mcp"
+  - version: "2026-05-05"
+    date: "2026-05-05"
+    breaking: false
+    highlights:
+      - "Initial launch with queries for workout records, fitness metrics, training status, daily health data, user information"

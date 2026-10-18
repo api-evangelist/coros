@@ -1,0 +1,79 @@
+generated: '2026-10-18'
+method: searched
+source:
+  - https://registry.npmjs.org/-/v1/search?text=coros
+  - https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+  - https://github.com/coroslab/COROS-MCP
+packages:
+  - name: coros-mcp
+    registry: npm
+    url: https://www.npmjs.com/package/coros-mcp
+    language: TypeScript
+    official: true
+    version: 0.1.1
+    published: 2026-06-24
+    note: Official COROS MCP TypeScript CLI for COROS MCP gateway login and tool calls
+  - name: "@coros_open/coros-mcp-login"
+    registry: npm
+    url: https://www.npmjs.com/package/@coros_open/coros-mcp-login
+    language: TypeScript
+    official: true
+    version: 0.1.0
+    published: 2026-05-08
+    note: TypeScript CLI for COROS MCP gateway login and tool calls
+  - name: coros-additional-mcp
+    registry: npm
+    url: https://www.npmjs.com/package/coros-additional-mcp
+    language: TypeScript
+    official: false
+    version: 0.1.4
+    published: 2026-09-22
+    note: Unofficial COROS Training Hub API client and MCP server for activity uploads
+  - name: "@nyt87/crs-connect"
+    registry: npm
+    url: https://www.npmjs.com/package/@nyt87/crs-connect
+    language: TypeScript
+    official: false
+    version: 0.1.7
+    published: 2026-05-08
+    note: Interface to connect with Coros API (unofficial)
+  - name: ts-health
+    registry: npm
+    url: https://www.npmjs.com/package/ts-health
+    language: TypeScript
+    official: false
+    version: 0.1.16
+    published: 2026-10-16
+    note: TypeScript library for health, fitness & smartwatch data including COROS
+  - name: pi-coros-running-agent
+    registry: npm
+    url: https://www.npmjs.com/package/pi-coros-running-agent
+    language: TypeScript
+    official: false
+    version: 0.1.0
+    published: 2026-08-28
+    note: Pi package that connects Pi to a COROS Running Agent backend
+  - name: dsh-coros-badge
+    registry: npm
+    url: https://www.npmjs.com/package/dsh-coros-badge
+    language: TypeScript
+    official: false
+    version: 0.1.0
+    published: 2026-09-25
+    note: DeepSeek Harness plugin for COROS badge display
+  - name: "@iflow-mcp/rowlando-coros-workout-mcp"
+    registry: npm
+    url: https://www.npmjs.com/package/@iflow-mcp/rowlando-coros-workout-mcp
+    language: TypeScript
+    official: false
+    version: 1.0.0
+    published: 2026-10-14
+    note: MCP server for creating COROS strength workouts via the Training Hub API
+  - name: COROS-MCP
+    registry: github
+    url: https://github.com/coroslab/COROS-MCP
+    language: TypeScript
+    official: true
+    version: null
+    published: null
+    note: Official COROS MCP server and Agent skills repository on GitHub

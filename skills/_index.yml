@@ -1,0 +1,15 @@
+name: COROS agent skills
+generated: '2026-10-18'
+method: searched
+source: https://github.com/coroslab/COROS-MCP/tree/main/skill
+note: COROS publishes no public OpenAPI, so no operationId-grounded skills were generated. The provider-published skill is
+  saved verbatim; it drives the COROS MCP server tools rather than REST operations.
+skills:
+- file: _original/coros_mcp_login_gateway/SKILL.md
+  name: coros_mcp_login_gateway
+  official: true
+  source: https://raw.githubusercontent.com/coroslab/COROS-MCP/main/skill/coros_mcp_login_gateway/SKILL.md
+  api: mcp/coros-mcp.yml
+  install: npm install -g coros-mcp
+  description: Connect or refresh COROS MCP through the global gateway, configure OpenClaw, and discover and call COROS tools
+    for private activity and health queries, training plans, workout templates, and scheduled workouts.

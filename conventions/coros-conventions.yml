@@ -1,0 +1,21 @@
+generated: '2026-10-18'
+method: searched
+source:
+  - https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+  - https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+auth_style: OAuth 2.0
+idempotency:
+  coverage: na
+  note: Idempotency mechanisms not documented
+pagination:
+  style: unknown
+  params: unknown
+  response_fields: unknown
+error_envelope:
+  shape: unknown
+rate_limit_signaling:
+  headers: unknown
+  status_code: unknown
+request_id_tracing: unknown
+versioning: unknown
+note: Limited documentation available. Partner API has rate limit of 1,000 calls/minute. Webhook push notifications include client_id/secret in header.

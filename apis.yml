@@ -1,23 +1,186 @@
 aid: coros
+
 name: COROS
-description: 'COROS is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: COROS is a sports technology company that makes GPS sport watches (PACE, APEX, NOMAD, VERTIX), the DURA GPS bike computer, heart
+  rate monitors and sensors, plus the COROS app and Training Hub for runners, cyclists, climbers and other endurance athletes. For developers,
+  COROS publishes a Partner API for established platforms (multi-user OAuth 2.0, webhook push of workout data, two-way activity and workout/training-plan
+  sync, GPX route import/export, daily health data and FIT file downloads, applied for via api@coros.com) and a COROS MCP server that apps can
+  connect to through OAuth 2.0 without an application.
+
 url: https://raw.githubusercontent.com/api-evangelist/coros/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:kin-score-markets
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Wearables
+- Fitness
+- GPS Watches
+- Sports Technology
+- Health Data
+- Webhook
+- Authentication
+- MCP
+
+tags_raw:
+- Company
+- Wearables
+- Fitness
+- GPS Watches
+- Sports Technology
+- Health Data
+- Webhooks
+- OAuth 2.0
+- MCP
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://coros.com/public/images/COROS.svg
+
 common:
+- type: RateLimits
+  url: rate-limits/coros-rate-limits.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: CLI
+  url: cli/coros-cli.yml
+- type: ChangeLog
+  url: changelog/coros-changelog.yml
+- type: Conventions
+  url: conventions/coros-conventions.yml
+- type: Authentication
+  url: authentication/coros-authentication.yml
+- type: Lifecycle
+  url: lifecycle/coros-lifecycle.yml
+- type: Conformance
+  url: conformance/coros-conformance.yml
+- type: MCPServer
+  url: mcp/coros-mcp.yml
+- type: WellKnown
+  url: well-known/coros-well-known.yml
+- type: Hosts
+  url: hosts/coros-hosts.yml
+- type: Vendors
+  url: vendors/coros-vendors.yml
+- type: SDKs
+  url: packages/coros-packages.yml
+- type: Packages
+  url: packages/coros-packages.yml
+- type: DomainSecurity
+  url: security/coros-domain-security.yml
 - type: Website
   url: https://coros.com
+- type: DeveloperPortal
+  url: https://support.coros.com/hc/en-us/sections/53180979524884-API-and-MCP-Connections
+- type: Documentation
+  url: https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+- type: SignUp
+  url: https://support.coros.com/hc/en-us/articles/17085887816340-Submit-an-API-Application
+- type: Login
+  url: https://t.coros.com
+- type: Support
+  url: https://support.coros.com/hc/en-us
+- type: Blog
+  url: https://coros.com/stories
+- type: StatusPage
+  url: https://coros.com/cn/status
+- type: TermsOfService
+  url: https://coros.com/terms
+- type: PrivacyPolicy
+  url: https://coros.com/privacy
+
+apis:
+- name: COROS Partner API
+  description: Programmatic access to COROS user data for established platforms, granted after an application to COROS (api@coros.com). Per the
+    Partner API Access page it provides multi-user OAuth 2.0 credentials, webhook push of workout data (~5 minutes, with retries), two-way activity
+    sync, structured workout and training plan sync, GPX route import/export (up to 50MB), daily health data, FIT file downloads and a 1,000 calls/minute
+    rate limit. No public API reference or base URL is published; credentials and technical details are issued to approved partners.
+  humanURL: https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+  tags:
+  - Partner API
+  - Authentication
+  - Webhook
+  - Fitness
+  tags_raw:
+  - Partner API
+  - OAuth 2.0
+  - Webhooks
+  - Fitness
+  properties:
+  - type: Documentation
+    url: https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+  - type: SignUp
+    url: https://support.coros.com/hc/en-us/articles/17085887816340-Submit-an-API-Application
+  aid: coros:coros-partner-api
+- name: COROS MCP Server
+  description: Remote Model Context Protocol server that lets applications read a user's COROS training data and write workout plans after the
+    user authorizes them through OAuth 2.0 (single-user scope, no application required). Regional endpoints mcpus.coros.com, mcpeu.coros.com and
+    mcpcn.coros.com are listed in the official coroslab/COROS-MCP repository.
+  humanURL: https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+  baseURL: https://mcp.coros.com/mcp
+  tags:
+  - MCP
+  - Authentication
+  - Artificial Intelligence
+  tags_raw:
+  - MCP
+  - OAuth 2.0
+  - AI
+  properties:
+  - type: Documentation
+    url: https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+  - type: GitHubRepository
+    url: https://github.com/coroslab/COROS-MCP
+  aid: coros:coros-mcp-server
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website coros.com (title "COROS | GPS Watches & Training Tools for Endurance Athletes"); Partner API and MCP docs live in the Zendesk
+    help center section "API and MCP Connections" (Cloudflare challenge to curl, 200 via fetch-url.py). /cn/status is titled "COROS服务器状态" (COROS
+    server status). github.com/coros not confirmed as the company org, not added.
+  evidence:
+  - url: https://coros.com
+    status: 200
+  - url: https://support.coros.com/hc/en-us/sections/53180979524884-API-and-MCP-Connections
+    status: 200
+  - url: https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+    status: 200
+  - url: https://support.coros.com/hc/en-us/articles/17085887816340-Submit-an-API-Application
+    status: 200
+  - url: https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+    status: 200
+  - url: https://coros.com/stories
+    status: 200
+  - url: https://coros.com/cn/status
+    status: 200
+  - url: https://t.coros.com
+    status: 200
+  - url: https://coros.com/terms
+    status: 200
+  - url: https://coros.com/privacy
+    status: 200
+  - url: https://support.coros.com/hc/en-us
+    status: 200
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 30
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=deepseek,regulatory=anthropic

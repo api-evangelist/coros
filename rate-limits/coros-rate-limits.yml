@@ -1,0 +1,13 @@
+generated: '2026-10-18'
+method: searched
+source: https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+name: COROS rate limits
+limit_count: 1
+limits:
+  - name: Partner API rate limit
+    limit_text: "1,000 calls/minute"
+    max: 1000
+    window: minute
+    scope: per-api-key
+    note: Rate limit for Partner API calls
+note: MCP rate limits not documented. FIT file downloads limited to 50 requests per calendar day.

@@ -1,0 +1,51 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://coros.com/privacy
+- https://coros.com/terms
+signals:
+  data_subject_request:
+    url: https://coros.com/privacy
+    section: Privacy Disclosures for California Residents
+    note: CCPA access and deletion requests go to COROS or its data protection officer through the controller contact (legal@coros.com). The same page lists the GDPR rights, including Art. 15 access, Art. 17 erasure and Art. 20 portability.
+    channel: legal@coros.com
+    evidence:
+    - source: https://coros.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: You also have the right to request in certain circumstances that we delete personal information that we have collected directly from you. Please contact us or our data protection officer using the contact information above to exercise these rights.
+  data_residency:
+    url: https://coros.com/privacy
+    section: Do we transfer data to countries outside the European Union or the European Economic Area?
+    note: Storage location depends on region. EEA and UK customers are stored in the EEA, customers elsewhere (except China) are stored in the US, and transfers to Group Companies outside the EU rely on explicit consent under Art. 49(1)(1)(a) GDPR.
+    evidence:
+    - source: https://coros.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: For customers residing in a country in the European Economic Area ("EEA") and United Kingdom ("U.K."), your personal data that we collect from you will be collected and stored on servers in the EEA. For customers outside of EEA, U.K, and China, your personal data that we collect from you will be collected and stored on servers in the U.S.
+  data_retention:
+    url: https://coros.com/privacy
+    section: How long do we store personal data for?
+    note: The retention rule is based on purpose and statutory obligations. No specific retention periods are given.
+    evidence:
+    - source: https://coros.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: As a matter of principle, we store personal data only for as long as is necessary to achieve the above-mentioned purposes.
+  subprocessors:
+    url: https://coros.com/privacy
+    note: The policy lists recipients by CATEGORY for each processing purpose (Hosting Provider, Email Service Provider, Payment Service Provider, Group Companies, and others). It does not publish a named subprocessor list.
+    evidence:
+    - source: https://coros.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'As part of the processing, we transfer your data to the following categories of recipients: Hosting Provider, Group Companies and Customer Support Tool Provider.'
+  age_assurance:
+    url: https://coros.com/terms
+    note: The minimum age is 16 and is self-certified. Users under 16 may use the Service only with a parent or guardian. No age-verification mechanism is described.
+    evidence:
+    - source: https://coros.com/terms
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: You certify that you are 16 years old or if you are under 16, that you are using the Service with the supervision of your parent or legal guardian, who agrees to be bound by these Terms.
+note: Signals come from coros.com/privacy and coros.com/terms, both fetched 2026-10-18. The privacy policy also has a "Law Enforcement and Government Data Demands" section. It says COROS requires a warrant and notifies users before disclosure, but it does not mention a published transparency report, so none is recorded. It also states that no automated decision-making or profiling takes place under Art. 22 GDPR. The footer links an Accessibility Statement, but it was not read, so no accessibility_conformance signal is recorded. No incident-notification, Global Privacy Control, exit-assistance, SBOM, AI-transparency or support-lifetime language was found on these pages.

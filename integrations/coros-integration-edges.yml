@@ -1,0 +1,16 @@
+generated: '2026-10-18'
+method: none
+source:
+- https://zapier.com/apps/coros/integrations
+- https://n8n.io/integrations/coros/
+- https://composio.dev/toolkits/coros
+- https://monid.ai/tools/coros
+checked:
+- https://composio.dev/toolkits/coros
+- https://monid.ai/tools/coros
+- https://n8n.io/integrations/coros/
+- https://zapier.com/apps/coros/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

@@ -1,0 +1,239 @@
+generated: '2026-10-18'
+method: searched
+status: published
+source: https://github.com/coroslab/COROS-MCP/blob/main/README.md
+docs: https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+name: COROS MCP Server
+type: MCPServer
+deployment:
+  mode: remote
+  endpoint: https://mcp.coros.com/mcp
+  auth: oauth
+  verified: probed
+  probe:
+    date: '2026-10-18'
+    request: POST initialize (JSON-RPC) to https://mcp.coros.com/mcp, mcpus.coros.com/mcp, mcpeu.coros.com/mcp
+    status: 401
+    oauth_protected_resource:
+      url: https://mcp.coros.com/.well-known/oauth-protected-resource
+      status: 200
+      resource: https://mcpus.coros.com
+      authorization_servers:
+      - https://mcpus.coros.com
+      scopes_supported:
+      - openid
+      - mcp.tools
+      - offline_access
+      bearer_methods_supported:
+      - header
+  regional_endpoints:
+  - region: CN
+    url: https://mcpcn.coros.com/mcp
+  - region: EU
+    url: https://mcpeu.coros.com/mcp
+  - region: US
+    url: https://mcpus.coros.com/mcp
+  note: mcp.coros.com uses domain redirection to the account-region cluster; the README lists the regional URLs for clients
+    that do not follow redirects. The npm package coros-mcp (npm install -g coros-mcp, v0.1.1, 2026-06-24) installs the coros_mcp_login_gateway
+    Agent Skill and helper script for Claw-style assistants that log in to the same remote gateway; it is not documented as
+    a local stdio MCP server, so mode is remote.
+server:
+  transport: http
+  url: https://mcp.coros.com/mcp
+  listings:
+  - Claude connector directory (https://claude.ai/directory/coros, per changelog 2026-07-24)
+  - ChatGPT plugin directory (per changelog 2026-07-01)
+  - Workbuddy connector directory (per changelog 2026-08-27)
+  - Doubao plugin directory (per changelog 2026-09-09)
+auth:
+  methods:
+  - oauth2
+  scopes_supported:
+  - openid
+  - mcp.tools
+  - offline_access
+  note: Single-user OAuth 2.0 authorization by the COROS account holder; no application to COROS required (Build on COROS
+    MCP page).
+tools_evidence:
+  l3: table
+  evidence_url: https://github.com/coroslab/COROS-MCP/blob/main/README.md#tool-list
+  note: Tool names are those the provider PUBLISHES in its README Tool List tables; tools/list was not called (endpoint requires
+    OAuth, 401). The skill helper discovers tools dynamically, so the live list may differ.
+tools:
+- name: querySportRecords
+  category: Activity Analytics
+  description: Query COROS activity records with filters for date, sport type code, distance, duration, pace, and location.
+    Returns activity IDs and time info needed for subsequent detail and lap queries.
+  access: read
+- name: getActivityDetail
+  category: Activity Analytics
+  description: Query detailed activity data including heart rate, pace/speed, elevation, cadence, and other comprehensive
+    metrics.
+  access: read
+- name: analyzeActivityDetail
+  category: Activity Analytics
+  description: Generate coach-style analysis based on activity details, with optional focus on pace, speed, or heart rate.
+  access: read
+- name: queryActivityLapData
+  category: Activity Analytics
+  description: Query default lap or segment data for a specified activity, returned according to the display fields for that
+    sport type in the COROS App.
+  status: new
+  access: read
+- name: queryCustomActivityLapData
+  category: Activity Analytics
+  description: Query custom segment data within a precise time window of a specified activity, suitable for analyzing the
+    last N minutes or a particular segment.
+  status: new
+  access: read
+- name: downloadActivityFitFiles
+  category: Activity Analytics
+  description: Download FIT files for one or more activities for parsing complete raw activity data. Supports download by
+    individual activity or date range.
+  status: new
+  access: read
+- name: queryActivityFitFileDownloadUrls
+  category: Activity Analytics
+  description: Query raw download URLs for activity FIT files, as a fallback when the client cannot receive binary files.
+  status: new
+  access: read
+- name: queryDailyHealthData
+  category: Health & Recovery
+  description: Query daily health overview including steps, calories, stress, sleep, and heart rate summary. For heart-rate-only
+    queries, use the dedicated heart rate tools.
+  access: read
+- name: querySleepData
+  category: Health & Recovery
+  description: Query sleep score, main sleep duration, deep/light/REM ratios, wakefulness, sleep window, and nap information.
+  access: read
+- name: querySleepHrv
+  category: Health & Recovery
+  description: Query official sleep HRV assessment and raw curves. Daily averages, normal ranges, and evaluations are based
+    on official assessment.
+  status: new
+  access: read
+- name: queryAvgHeartRate
+  category: Health & Recovery
+  description: Query daily average heart rate trends.
+  access: read
+- name: queryRestingHeartRate
+  category: Health & Recovery
+  description: Query daily resting heart rate trends.
+  access: read
+- name: queryStressLevel
+  category: Health & Recovery
+  description: Query daily average stress trends.
+  access: read
+- name: queryHealthCheckTimeSeries
+  category: Health & Recovery
+  description: Query raw health check measurement curves including heart rate, HRV, stress, respiratory rate, and SpO2. Recent-days
+    searches are capped at 7 days; explicit date ranges can be longer, and recent searches may return the latest historical
+    complete check when the recent window is empty.
+  status: new
+  access: read
+- name: queryStressTimeSeries
+  category: Health & Recovery
+  description: Query raw stress data points including time, stress value, display score, stress HRV, and stress heart rate.
+    Maximum query window is 7 days.
+  status: new
+  access: read
+- name: queryRecoveryStatus
+  category: Health & Recovery
+  description: Query current recovery percentage, recovery level, and estimated full recovery time.
+  access: read
+- name: queryMenstruationCycles
+  category: Health & Recovery
+  description: Query menstrual cycle data including today's status, next period, daily phase, and cycle range.
+  status: new
+  access: read
+- name: queryFitnessAssessmentOverview
+  category: Training Management
+  description: Query fitness assessment overview including VO2max, Running Performance, threshold pace, and 5K/10K/half-marathon/marathon
+    race predictions.
+  access: read
+- name: queryTrainingLoadAssessment
+  category: Training Management
+  description: Query training load assessment including recent daily comments, short-term load, long-term load, and load ratio.
+  access: read
+- name: queryTrainingSchedule
+  category: Training Management
+  description: Query workouts scheduled for this week or a specified date range; distinguish plan workouts from standalone
+    scheduled workouts before editing.
+  access: read
+- name: queryTrainingPlanLibrary
+  category: Training Management
+  description: List the user's training plans by status and type, including whether each record can be edited.
+  status: new
+  access: read
+- name: queryTrainingPlanDetails
+  category: Training Management
+  description: Read a selected training plan and its workout structure before making changes.
+  status: new
+  access: read
+- name: createTrainingPlan
+  category: Training Management
+  description: Create and save a 4–16-natural-week plan for running, cycling or trail running, with rest days and training
+    phases; it starts on the specified date.
+  status: new
+  access: write
+- name: updateTrainingPlan
+  category: Training Management
+  description: Update an editable in-progress execution plan; submitted days replace the full day's workouts, while omitted
+    days remain unchanged.
+  status: new
+  access: write
+- name: queryWorkoutLibrary
+  category: Training Management
+  description: List reusable workouts saved in the user's own workout library.
+  status: new
+  access: read
+- name: queryWorkoutDetails
+  category: Training Management
+  description: Read a library workout's content and editability before updating it.
+  status: new
+  access: read
+- name: createSingleWorkout
+  category: Training Management
+  description: Save a reusable running, cycling or trail-running workout to the library without scheduling it.
+  status: new
+  access: write
+- name: updateWorkoutDetails
+  category: Training Management
+  description: Replace an editable library workout; copies already on the schedule remain unchanged.
+  status: new
+  access: write
+- name: scheduleWorkout
+  category: Training Management
+  description: Copy an existing library workout onto one date, including existing strength or swimming workouts; keep the
+    library original unchanged.
+  status: new
+  access: write
+- name: createScheduledWorkout
+  category: Training Management
+  description: Create a new running, cycling or trail-running workout directly on one date without adding a library template.
+  status: new
+  access: write
+- name: queryScheduledWorkoutDetails
+  category: Training Management
+  description: Read one standalone scheduled workout and its editability using its date and scheduled-copy identifier.
+  status: new
+  access: read
+- name: updateScheduledWorkout
+  category: Training Management
+  description: Replace an editable standalone workout on its current date without changing its library original; plan workouts
+    use updateTrainingPlan.
+  status: new
+  access: write
+- name: queryDevices
+  category: Other
+  description: Query the list of COROS devices bound to the user, including device ID, firmware type, and custom name.
+  access: read
+- name: queryUserInfo
+  category: Other
+  description: Query basic user profile including height, weight, birthday, and gender.
+  access: read
+companion:
+  skill: skills/_original/coros_mcp_login_gateway/SKILL.md
+  skill_source: https://github.com/coroslab/COROS-MCP/blob/main/skill/coros_mcp_login_gateway/SKILL.md
+  npm: https://www.npmjs.com/package/coros-mcp
+  changelog: https://github.com/coroslab/COROS-MCP/blob/main/changelog/CHANGELOG.md

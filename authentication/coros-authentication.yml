@@ -1,0 +1,27 @@
+generated: '2026-10-18'
+method: searched
+source:
+  - https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+  - https://support.coros.com/hc/en-us/articles/53181619102996-Build-on-COROS-MCP
+docs: https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access
+schemes:
+  - type: oauth2
+    name: Partner API OAuth 2.0
+    description: Multi-user OAuth 2.0 credentials for established platforms
+    flow: authorization_code
+    authorization_url: unknown
+    token_url: unknown
+    scopes: []
+  - type: oauth2
+    name: MCP OAuth 2.0
+    description: Single-user OAuth 2.0 authorization for MCP applications
+    flow: authorization_code
+    authorization_url: unknown
+    token_url: unknown
+    scopes: []
+  - type: apiKey
+    name: Client ID/Secret
+    description: Client ID and Secret issued to approved partners for API access
+    in: header
+    field: Authorization
+note: Partner API uses OAuth 2.0 with client_id/secret in header for webhook push notifications. MCP uses OAuth 2.0 for single-user authorization. Specific endpoints and URLs not publicly documented.

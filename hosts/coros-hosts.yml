@@ -1,0 +1,105 @@
+generated: '2026-10-18'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 7
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - identity
+  - other
+  - portal
+  - website
+hosts:
+- host: api.coros.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: coros.com
+  role: api
+  relation: own
+- host: coros.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - Blog
+  - StatusPage
+  - TermsOfService
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: coros.com
+  role: website
+  relation: own
+- host: mcp.coros.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: coros.com
+  role: other
+  relation: own
+- host: support.coros.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  - Documentation
+  - SignUp
+  - Support
+  serves:
+  - docs
+  - cdn
+  - support
+  vendor: cloudflare
+  registrable_domain: coros.com
+  role: portal
+  relation: own
+- host: t.coros.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: coros.com
+  role: identity
+  relation: own
+- host: training.coros.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coros.com
+  role: other
+  relation: own
+- host: us.coros.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: coros.com
+  role: other
+  relation: own

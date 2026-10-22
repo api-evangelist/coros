@@ -1,5 +1,5 @@
 generated: '2026-10-18'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/coros/integrations
 - https://n8n.io/integrations/coros/
@@ -7,10 +7,38 @@ source:
 - https://monid.ai/tools/coros
 checked:
 - https://composio.dev/toolkits/coros
+- https://docs.tryterra.co/reference/health-and-fitness-api/supported-integrations
 - https://monid.ai/tools/coros
 - https://n8n.io/integrations/coros/
 - https://zapier.com/apps/coros/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Terra
+  partner: terra-api
+  partner_match: aggregator
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: system-coverage
+  evidence: https://docs.tryterra.co/reference/health-and-fitness-api/supported-integrations
+  category: health data source
+  contract_reference:
+    list: Terra supported integrations (docs.tryterra.co)
+    spec_file: null
+    listed_name: Coros
+    listed_id: COROS
+    listed_names:
+    - Coros
+    matched_domain: coros.com
+    matched_by: domain
+    signal_note: delivery mode / access model / table section are context, never counted
+    detected_by: sweep-health-wellness.py
+    detected: '2026-10-19'
+    delivery_mode:
+    - Periodically fetched
+    developer_access:
+    - Managed
+  detected_by: sweep-health-wellness.py
+  first_seen: '2026-10-19'
 templates: []

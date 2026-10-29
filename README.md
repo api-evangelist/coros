@@ -64,5 +64,46 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-COROS is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets) and added to the network as a stub for full-pipeline profiling.
-- https://coros.com
+COROS is a sports technology company that makes GPS sport watches (PACE, APEX, NOMAD, VERTIX), the DURA GPS bike computer, heart rate monitors and sensors, plus the COROS app and Training Hub for runners, cyclists, climbers and other endurance athletes. For developers, COROS publishes a Partner API for established platforms (multi-user OAuth 2.0, webhook push of workout data, two-way activity and workout/training-plan sync, GPX route import/export, daily health data and FIT file downloads, applied for via api@coros.com) and a COROS MCP server that apps can connect to through OAuth 2.0 without an application.
+
+**Areas:** Company · Wearables · Fitness · GPS Watches · Sports Technology · Health Data · Webhook · Authentication · MCP
+
+## COROS on APIs.io
+
+Everything profiled for COROS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coros/](https://apis.io/providers/coros/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- COROS Partner API — Programmatic access to COROS user data for established platforms, granted after an application to COROS (api@coros.com). Per the Partner API Access page it…
+- COROS MCP Server — Remote Model Context Protocol server that lets applications read a user's COROS training data and write workout plans after the user authorizes them through…
+
+_These APIs get their own pages on APIs.io at the next catalog build, and this README is re-rendered with links when they do._
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://coros.com)
+- [Documentation](https://support.coros.com/hc/en-us/articles/53181766856724-Partner-API-Access)
+- [Sign up](https://support.coros.com/hc/en-us/articles/17085887816340-Submit-an-API-Application)
+- [Support](https://support.coros.com/hc/en-us)
+- [Blog](https://coros.com/stories)
+- [Terms of service](https://coros.com/terms)
+- [Privacy policy](https://coros.com/privacy)
+- [Status](https://coros.com/cn/status)
+
+## API Evangelist rating
+
+Not yet rated. See [apis.io/providers/coros/](https://apis.io/providers/coros/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for COROS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coros/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
